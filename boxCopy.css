@@ -6,13 +6,13 @@
 html, body {min-height: 100%;}
 /*a nice BG*/
 body {
-	background: #133f98; /*fallback*/
-	background: linear-gradient(#f1f1f1, #1648ad);
+	background: #544; /*fallback*/
+	background: linear-gradient(#544, #565);
 }
 
 /*Thumbnail Background*/
 .thumb {
-    width: 85%; max-width: 400px; height: 300px; margin: 70px auto;
+	width: 400px; height: 300px; margin: 70px auto;
 	perspective: 1000px;
 }
 .thumb a {
@@ -20,7 +20,7 @@ body {
 	/*double layered BG for lighting effect*/
 	background: 
 		linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-		url("./wall.jpg");
+		url("http://thecodeplayer.com/u/m/i1.png");
 	/*disabling the translucent black bg on the main image*/
 	background-size: 0, cover;
 	/*3d space for children*/
