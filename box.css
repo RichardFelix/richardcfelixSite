@@ -15,21 +15,21 @@ body {
     width: 85%; max-width: 400px; height: 300px; margin: 70px auto;
 	perspective: 1000px;
 }
-.thumb a {
+.thumb #image {
 	display: block; width: 100%; height: 100%;
 	/*double layered BG for lighting effect*/
 	background: 
 		linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-		url("./wall.jpg");
+		url("./wall.jpg"); /*pic credit: Fré Sonneveld*/
 	/*disabling the translucent black bg on the main image*/
 	background-size: 0, cover;
 	/*3d space for children*/
 	transform-style: preserve-3d;
 	transition: all 0.5s;
 }
-.thumb:hover a {transform: rotateX(80deg); transform-origin: bottom;}
+.thumb:hover #image {transform: rotateX(80deg); transform-origin: bottom;}
 /*bottom surface */
-.thumb a:after {
+.thumb #image:after {
 	/*36px high element positioned at the bottom of the image*/
 	content: ''; position: absolute; left: 0; bottom: 0; 
 	width: 100%; height: 36px;
@@ -41,7 +41,7 @@ body {
 	transform: rotateX(90deg); transform-origin: bottom;
 }
 /*label style*/
-.thumb a span {
+.thumb #image span {
 	color: white; text-transform: uppercase;
 	position: absolute; top: 100%; left: 0; width: 100%;
 	font: bold 12px/36px Montserrat; text-align: center;
@@ -50,7 +50,7 @@ body {
 	z-index: 1;
 }
 /*shadow*/
-.thumb a:before {
+.thumb #image:before {
 	content: ''; position: absolute; top: 0; left: 0;
 	width: 100%; height: 100%;
 	background: rgba(0, 0, 0, 0.5); 
@@ -61,7 +61,7 @@ body {
 	transform: rotateX(95deg) translateZ(-80px) scale(0.75);
 	transform-origin: bottom;
 }
-.thumb:hover a:before {
+.thumb:hover #image:before {
 	opacity: 1;
 	/*blurred effect using box shadow as filter: blur is not supported in all browsers*/
 	box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);

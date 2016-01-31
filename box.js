@@ -3,8 +3,8 @@ var Timer = setTimeout(function() {
     
   Timer = setInterval(function () {
       
-    if(document.getElementById("image").style.opacity != .5)
-        document.getElementById("image").style.opacity = .5;
+    if(document.getElementById("image").style.opacity != .8)
+        document.getElementById("image").style.opacity = .8;
     else
         document.getElementById("image").style.opacity = 1;
       
