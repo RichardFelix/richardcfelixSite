@@ -7,7 +7,7 @@ html, body {min-height: 100%;}
 /*a nice BG*/
 body {
 	background: #133f98; /*fallback*/
-	background: linear-gradient(#f1f1f1, #1648ad);
+	background: linear-gradient(#000000, #1648ad);
 }
 
 /*Thumbnail Background*/

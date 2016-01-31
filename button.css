@@ -1,0 +1,31 @@
+.myButton {
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    right: 10%;
+	-moz-box-shadow:inset 0px 0px 15px 3px #1648ad;
+	-webkit-box-shadow:inset 0px 0px 15px 3px #1648ad;
+	box-shadow:inset 0px 0px 15px 3px #1648ad;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1648ad), color-stop(1, #415989));
+	background:-moz-linear-gradient(top, #1648ad 5%, #415989 100%);
+	background:-webkit-linear-gradient(top, #1648ad 5%, #415989 100%);
+	background:-o-linear-gradient(top, #1648ad 5%, #415989 100%);
+	background:-ms-linear-gradient(top, #1648ad 5%, #415989 100%);
+	background:linear-gradient(to bottom, #1648ad 5%, #415989 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989',GradientType=0);
+	background-color:#1648ad;
+	-moz-border-radius:17px;
+	-webkit-border-radius:17px;
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Impact;
+	font-size:28px;
+	font-weight:bold;
+	padding:10px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #1648ad;
+}
