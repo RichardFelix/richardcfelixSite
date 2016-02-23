@@ -2,14 +2,19 @@
   "name": "clean",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4",
     "jade": "^1.11.0"
+  },
+  "devDependencies": {
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-less": "^3.0.5",
+    "gulp-sourcemaps": "^1.6.0"
   }
 }
