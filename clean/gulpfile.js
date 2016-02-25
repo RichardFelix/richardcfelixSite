@@ -2,46 +2,99 @@ var gulp = require('gulp'),
     path = require('path'),
     $ = require('gulp-load-plugins')();
 
-// gulp.task('default', sass);
+////////////////////////////////////////////
+//             Configuration              //
+////////////////////////////////////////////
+const config = {
+    styles: {
+        src: ['public/sass/style.scss'],
+        dest: 'public/css/',
+        srcDir: 'public/sass/*.scss'
+    },
+    scripts: {
+        src: ['public/js/*.js'],
+        dest: 'public/js/',
+        bundle: 'custom.js'
+    }
+}
 
-// SASS
-
-gulp.task('sass', ()=>{
+////////////////////////////////////////////
+//             Development                //
+////////////////////////////////////////////
+gulp.task('dev:sass', ()=>{
   return gulp
-    .src('public/sass/style.scss')
+    .src(config.styles.src)
     .pipe($.sourcemaps.init())
     .pipe($.sass())
     .pipe($.autoprefixer({
       browsers: ['last 2 versions']
     }))
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('public/css/'));
+    .pipe(gulp.dest(config.styles.dest));
 });
 
-gulp.task('sass:watch', () =>{
-  gulp.watch('public/sass/*.scss', ['sass']);
-});
-
-// LESS
-
-gulp.task('less', lessCompile);
-
-function lessCompile(){
-    return gulp
-        .src('public/less/style.less')
-        .pipe($.sourcemaps.init())
-        .pipe($.less({
-          paths: [ path.join(__dirname, 'less', 'includes') ]
-        }))
-        .pipe($.sourcemaps.write())
-        .pipe(gulp.dest('public/css/'));
-};
-
-// jsHint
-
-gulp.task('lint', function() {
+gulp.task('dev:lint', ()=>{
   return gulp
-    .src('public/js/*.js')
+    .src(config.scripts.src)
+    .pipe($.cached('linting'))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
 });
+
+gulp.task('dev',
+  gulp.parallel(
+    'dev:sass',
+    'dev:lint'
+));
+
+gulp.task('dev:watch', gulp.series('dev', devWatch));
+
+function devWatch(){
+  gulp.watch(config.styles.srcDir, gulp.series('dev:sass'));
+  gulp.watch(config.scripts.src, gulp.series('dev:lint'));
+}
+
+gulp.task('default', gulp.series('dev:watch'));
+
+// gulp.task('dev:less', lessCompile);   // hoisted function this is why this works
+//
+// function lessCompile(){
+//     return gulp
+//         .src('public/less/style.less')
+//         .pipe($.sourcemaps.init())
+//         .pipe($.less({
+//           paths: [ path.join(__dirname, 'less', 'includes') ]
+//         }))
+//         .pipe($.sourcemaps.write())
+//         .pipe(gulp.dest('public/css/'));
+// };
+
+
+////////////////////////////////////////////
+//              Production                //
+////////////////////////////////////////////
+gulp.task('prod:sass', ()=>{
+  return gulp
+    .src(config.styles.src)
+    .pipe($.sass())
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions']
+    }))
+    .pipe($.cleanCss())
+    .pipe(gulp.dest(config.styles.dest));
+});
+
+gulp.task('prod:jsMini', ()=>{
+  return gulp
+    .src(config.scripts.src)
+    .pipe($.babel())
+    .pipe($.concat(config.scripts.bundle))
+    .pipe($.uglify())
+    .pipe(gulp.dest(config.scripts.dest))
+});
+
+gulp.task('production',          // gulp tasks are not hoisted like functions remmeber that
+  gulp.parallel(
+    'prod:sass',
+    'prod:jsMini'
+));

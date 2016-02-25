@@ -1,5 +1,2 @@
-(()=>{
-  console.log('geta');
-  let go = 1;
-  va go j= 2;
-})
+
+"use strict";function name(){console.log("greta")}
