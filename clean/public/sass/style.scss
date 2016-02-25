@@ -1,0 +1,21 @@
+/***********************
+       variables
+************************/
+$bodyBackgroundColor: #e67e22;
+$fontFamily: Open Sans;
+
+/************************
+        mixins
+************************/
+// @import './widthMixin.scss';
+// @import './positionMixin.scss';
+
+/************************
+        imports
+************************/
+@import './generalScope.scss';
+// @import './links.scss';
+// @import './responsive.scss';
+// @import './position.scss';
+// @import './animations.scss';
+// @import './form.scss';
