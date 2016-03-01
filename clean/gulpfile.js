@@ -1,6 +1,6 @@
-var gulp = require('gulp'),
-    path = require('path'),
-    $ = require('gulp-load-plugins')();
+const gulp = require('gulp'),
+      path = require('path'),
+      $ = require('gulp-load-plugins')();
 
 ////////////////////////////////////////////
 //             Configuration              //
@@ -15,6 +15,9 @@ const config = {
         src: ['public/js/*.js'],
         dest: 'public/js/',
         bundle: 'custom.js'
+    },
+    jade:{
+      srcDir: ['views/**/*.jade'],
     }
 }
 
@@ -41,34 +44,35 @@ gulp.task('dev:lint', ()=>{
     .pipe($.jshint.reporter('jshint-stylish'))
 });
 
+gulp.task('dev:jadeLint', ()=>{
+  return gulp
+    .src('views/*.jade')
+    .pipe($.pugLint());
+});
+
+gulp.task('dev:sassLint', ()=>{
+  return gulp.src('public/sass/*.scss')
+    .pipe($.scssLint());
+});
+
 gulp.task('dev',
   gulp.parallel(
     'dev:sass',
-    'dev:lint'
+    'dev:lint',
+    'dev:jadeLint',
+    'dev:sassLint'
 ));
 
 gulp.task('dev:watch', gulp.series('dev', devWatch));
 
 function devWatch(){
-  gulp.watch(config.styles.srcDir, gulp.series('dev:sass'));
-  gulp.watch(config.scripts.src, gulp.series('dev:lint'));
+    gulp.watch(config.styles.srcDir, gulp.series('dev:sass'));
+    gulp.watch(config.scripts.src, gulp.series('dev:lint'));
+    gulp.watch(config.jade.srcDir, gulp.series('dev:jadeLint'));
+    gulp.watch(config.styles.srcDir, gulp.series('dev:sassLint'));
 }
 
 gulp.task('default', gulp.series('dev:watch'));
-
-// gulp.task('dev:less', lessCompile);   // hoisted function this is why this works
-//
-// function lessCompile(){
-//     return gulp
-//         .src('public/less/style.less')
-//         .pipe($.sourcemaps.init())
-//         .pipe($.less({
-//           paths: [ path.join(__dirname, 'less', 'includes') ]
-//         }))
-//         .pipe($.sourcemaps.write())
-//         .pipe(gulp.dest('public/css/'));
-// };
-
 
 ////////////////////////////////////////////
 //              Production                //
@@ -98,3 +102,61 @@ gulp.task('production',          // gulp tasks are not hoisted like functions re
     'prod:sass',
     'prod:jsMini'
 ));
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                            Miscllenous                                                                          //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////
+//              Less Compiling            //
+////////////////////////////////////////////
+gulp.task('dev:less', lessCompile);   // hoisted function this is why this works
+
+function lessCompile(){
+    return gulp
+        .src('public/less/style.less')
+        .pipe($.sourcemaps.init())
+        .pipe($.less({
+          paths: [ path.join(__dirname, 'less', 'includes') ]
+        }))
+        .pipe($.sourcemaps.write())
+        .pipe(gulp.dest('public/css/'));
+};
+
+/////////////////////////////////
+//    Jade to HTML Compiling   //
+/////////////////////////////////
+gulp.task('jade', ()=>{
+  return gulp.src('views/**/*.jade')
+      .pipe($.jade({
+        pretty: true
+      }))
+      .pipe(gulp.dest('views/html/'))
+});
+
+//////////////////////////////////////////////////////
+//    Static Web File Watching w/ Live Reloading    //
+//////////////////////////////////////////////////////
+const browserSync = require('browser-sync').create(),
+      reload      = browserSync.reload;
+
+gulp.task('serve', ()=>{
+
+    browserSync.init({
+      server: {
+        baseDir: "views/html/"
+      }
+    });
+
+    gulp.watch("views/html/*.html").on("change", reload);
+});
+
+///////////////////////
+//    HTML5 Linting  //
+///////////////////////
+gulp.task('html', ()=>{
+    return gulp.src('views/html/*.html')
+        .pipe($.html5Lint());
+});

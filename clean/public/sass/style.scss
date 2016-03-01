@@ -3,7 +3,6 @@
 ************************/
 $bodyBackgroundColor: #e67e22;
 $fontFamily: Open Sans;
-
 /************************
         mixins
 ************************/
@@ -13,7 +12,7 @@ $fontFamily: Open Sans;
 /************************
         imports
 ************************/
-@import './generalScope.scss';
+@import './generalScope';
 // @import './links.scss';
 // @import './responsive.scss';
 // @import './position.scss';

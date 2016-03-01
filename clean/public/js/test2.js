@@ -10,4 +10,4 @@
 
   const me = new Person('John');
   console.log(me.getName());
-});
+}());

@@ -1,2 +1,3 @@
-
-"use strict";function name(){console.log("greta")}
+(()=>{
+  console.log('greta');
+}());
