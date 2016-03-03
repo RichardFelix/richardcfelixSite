@@ -1,0 +1,35 @@
+/************************
+       Hero
+************************/
+#hero{
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  h1, h3{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+  }
+  h1{
+    font-size: 4em;
+  }
+  h3{
+    padding-bottom: 30%;
+  }
+  .button a, a:visited{
+    display: inline-block;
+    border-radius: 50%;
+    color: #fff;
+    padding: 10px 10px;
+    margin-top: 10%;
+    cursor: pointer;
+    border:1px solid #fff;
+    text-decoration: none;
+  }
+  .button a:active, a:hover{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
+}

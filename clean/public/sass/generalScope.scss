@@ -1,9 +1,16 @@
 /************************
     general scope
 ************************/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  text-rendering: optimizeLegibility;
+}
 body{
   font-family: $fontFamily;
-}
-section.hero{
-
+  font-size: 20px;
+  font-weight: 300;
 }

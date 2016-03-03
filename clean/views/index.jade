@@ -1,15 +1,18 @@
 extends base
 
 block body
-  div(id='fullpage')
-    div.section
-      p Greta
-    div.section
-      p A yeah
-    div.section
+  div#fullpage
+    div.section#hero
+      h1#name Richard C Felix
+      h3#job Full Stack Web Developer
+      div.button
+        a(href='#aboutMe') \/
+    div.section#me
+      p about
+    div.section#project
       p projects
-    div.section
-      p contact
+    div.section#email
+        p contact
         
   include script.jade
   include footer.jade

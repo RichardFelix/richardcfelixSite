@@ -12,7 +12,7 @@ const config = {
         srcDir: 'public/sass/*.scss'
     },
     scripts: {
-        src: ['public/js/**/*.js'],
+        src: ['public/js/**/*.js', 'app.js'],
         dest: 'public/js/',
         bundle: 'custom.js'
     },

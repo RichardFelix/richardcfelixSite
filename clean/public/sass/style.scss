@@ -1,25 +1,27 @@
-/***********************
-       variables
-************************/
+//***********************
+//       variables
+//************************/
 // $bodyBackgroundColor: #e67e22;
-$fontFamily: lato;
-/************************
-        mixins
-************************/
+$fontFamily: Raleway;
+///************************
+//        mixins
+//************************/
 // @import './widthMixin.scss';
 // @import './positionMixin.scss';
 
 /************************
-        imports
+        Fonts
 ************************/
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
+//************************
+//        imports
+//************************/
 @import './generalScope';
+@import './hero';
 // @import './links';
 @import './responsive';
 // @import './position';
-// @import './animations';
+@import './animations';
 // @import './form';
-
-/************************
-        Fonts
-************************/
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import './nav';
