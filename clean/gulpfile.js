@@ -12,12 +12,12 @@ const config = {
         srcDir: 'public/sass/*.scss'
     },
     scripts: {
-        src: ['public/js/*.js'],
+        src: ['public/js/**/*.js'],
         dest: 'public/js/',
         bundle: 'custom.js'
     },
     jade:{
-      srcDir: ['views/**/*.jade'],
+      srcDir: 'views/**/*.jade',
     }
 }
 
@@ -46,7 +46,7 @@ gulp.task('dev:lint', ()=>{
 
 gulp.task('dev:jadeLint', ()=>{
   return gulp
-    .src('views/*.jade')
+    .src(config.jade.srcDir)
     .pipe($.pugLint());
 });
 

@@ -4,6 +4,7 @@ var express = require('express'),
 
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
+app.locals.pretty = true;
 
 app.get('/', (req, res) => {
   res.render('index');

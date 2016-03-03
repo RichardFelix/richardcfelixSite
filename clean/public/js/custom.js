@@ -1,1 +1,3 @@
-"use strict";function name(){console.log("greta")}function _classCallCheck(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}var _createClass=function(){function e(e,n){for(var r=0;r<n.length;r++){var a=n[r];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}return function(n,r,a){return r&&e(n.prototype,r),a&&e(n,a),n}}();
+$(document).ready(function() {
+    $('#fullpage').fullpage();
+});

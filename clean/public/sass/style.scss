@@ -1,8 +1,8 @@
 /***********************
        variables
 ************************/
-$bodyBackgroundColor: #e67e22;
-$fontFamily: Open Sans;
+// $bodyBackgroundColor: #e67e22;
+$fontFamily: lato;
 /************************
         mixins
 ************************/
@@ -13,8 +13,13 @@ $fontFamily: Open Sans;
         imports
 ************************/
 @import './generalScope';
-// @import './links.scss';
-// @import './responsive.scss';
-// @import './position.scss';
-// @import './animations.scss';
-// @import './form.scss';
+// @import './links';
+@import './responsive';
+// @import './position';
+// @import './animations';
+// @import './form';
+
+/************************
+        Fonts
+************************/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
