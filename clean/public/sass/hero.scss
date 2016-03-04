@@ -1,5 +1,5 @@
 /************************
-       Hero
+       Hero Section
 ************************/
 #hero{
   text-align: center;
@@ -16,6 +16,7 @@
   }
   h3{
     padding-bottom: 30%;
+    color: $mainColor;
   }
   .button a, a:visited{
     display: inline-block;

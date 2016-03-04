@@ -1,4 +1,6 @@
-
+/************************
+       Responsive
+************************/
 @media (max-width:320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   #hero{
@@ -7,18 +9,43 @@
     }
   }
 }
-@media (max-width:480px) {
-  /* smartphones, Android phones, landscape iPhone */
-}
-@media (max-width:600px) {
-  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-}
-@media (max-width:801px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-@media (max-width:1025px) {
-  /* big landscape tablets, laptops, and desktops */
-}
-@media (max-width:1281px) {
-  /* hi-res laptops and desktops */
-}
+// // @media (max-width:480px) {
+// //   /* smartphones, Android phones, landscape iPhone */
+// // }
+// // @media (max-width:600px) {
+// //   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+// // }
+// // @media (max-width:801px) {
+// //   /* tablet, landscape iPad, lo-res laptops ands desktops */
+// // }
+// // @media (max-width:1025px) {
+// //   /* big landscape tablets, laptops, and desktops */
+// // }
+// // @media (max-width:1281px) {
+// //   /* hi-res laptops and desktops */
+// // }
+//
+// // 480, 768, 1024, 1200
+//
+// @media only screen and (max-width:480px){
+//   /*0 to 480px*/
+//     #hero{
+//       h1{
+//         font-size: 3em;
+//       }
+//       h3{
+//         position: absolute;
+//         top: 58%;
+//         left: 1%;
+//       }
+//     }
+// }
+// @media only screen and (max-width:767px){
+//   /*481 to 767px*/
+// }
+// @media only screen and (max-width:1023px){
+//   /*768 to 1023px*/
+// }
+// @media only screen and (max-width:1200px){
+//   /*1024 to 1200*/
+// }

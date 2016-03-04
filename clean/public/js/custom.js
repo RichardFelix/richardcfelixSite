@@ -41,7 +41,7 @@ $(document).ready(function() {
         controlArrows: true,
         verticalCentered: true,
         resize : false,
-        sectionsColor : ['#ccc', '#fff', '#d0d931', '#5d2d2d'],
+        sectionsColor : ['#ccc', '#ecf0f1', '#d0d931', '#5d2d2d'],
         paddingTop: '3em',
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
@@ -53,18 +53,18 @@ $(document).ready(function() {
         slideSelector: '.slide',
 
         //events
-        onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-        afterResize: function(){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        // onLeave: function(index, nextIndex, direction){},
+        // afterLoad: function(anchorLink, index){},
+        // afterRender: function(){},
+        // afterResize: function(){},
+        // afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        // onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
     });
 
     /************************
         Animations
     ************************/
-    $('#name').addClass('animated fadeInDown');
-    $('#job').addClass('animated fadeInDown');
+    $('.name').addClass('animated fadeInDown');
+    $('.job').addClass('animated fadeInDown');
     $('.button').addClass('animated fadeIn');
 });
