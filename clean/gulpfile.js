@@ -18,6 +18,10 @@ const config = {
     },
     jade:{
       srcDir: 'views/**/*.jade',
+    },
+    img:{
+      srcDir: 'public/img/preBuild/*.jpg',
+      dest: 'public/img/'
     }
 }
 
@@ -97,10 +101,19 @@ gulp.task('prod:jsMini', ()=>{
     .pipe(gulp.dest(config.scripts.dest))
 });
 
+gulp.task('prod:img', ()=>{
+  return gulp.src(config.img.srcDir)
+    .pipe($.imagemin({
+      optimizationLevel: 5
+    }))
+    .pipe(gulp.dest(config.img.dest));
+});
+
 gulp.task('production',          // gulp tasks are not hoisted like functions remmeber that
   gulp.parallel(
     'prod:sass',
-    'prod:jsMini'
+    'prod:jsMini',
+    'prod:img'
 ));
 
 
