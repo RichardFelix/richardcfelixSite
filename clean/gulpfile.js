@@ -8,20 +8,31 @@ const gulp = require('gulp'),
 const config = {
     styles: {
         src: ['public/sass/style.scss'],
-        dest: 'public/css/',
-        srcDir: 'public/sass/*.scss'
+        srcDir: 'public/sass/*.scss',
+        dest: 'public/css/'
     },
     scripts: {
         src: ['public/js/**/*.js', 'app.js'],
+        bundle: 'custom.js',
         dest: 'public/js/',
-        bundle: 'custom.js'
     },
     jade:{
+      src: 'views/index.jade',
       srcDir: 'views/**/*.jade',
+      dest: 'views/html/'
     },
     img:{
       srcDir: 'public/img/preBuild/*.jpg',
       dest: 'public/img/'
+    },
+    html:{
+      srcDir: 'views/html/*.html',
+      dest: 'views/html/'
+    },
+    less:{
+      src: ['public/less/style.less'],
+      srcDir: 'public/less/*.less',
+      dest: 'public/less/',
     }
 }
 
@@ -55,7 +66,7 @@ gulp.task('dev:jadeLint', ()=>{
 });
 
 gulp.task('dev:sassLint', ()=>{
-  return gulp.src('public/sass/*.scss')
+  return gulp.src(config.styles.srcDir)
     .pipe($.scssLint());
 });
 
@@ -119,7 +130,7 @@ gulp.task('production',          // gulp tasks are not hoisted like functions re
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                            Miscllenous                                                                          //
+//                                                            Miscellaneous                                                                        //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////
@@ -129,24 +140,32 @@ gulp.task('dev:less', lessCompile);   // hoisted function this is why this works
 
 function lessCompile(){
     return gulp
-        .src('public/less/style.less')
+        .src(config.less.src)
         .pipe($.sourcemaps.init())
         .pipe($.less({
           paths: [ path.join(__dirname, 'less', 'includes') ]
         }))
         .pipe($.sourcemaps.write())
-        .pipe(gulp.dest('public/css/'));
+        .pipe(gulp.dest(config.styles.dest));
 };
 
 /////////////////////////////////
 //    Jade to HTML Compiling   //
 /////////////////////////////////
 gulp.task('jade', ()=>{
-  return gulp.src('views/**/*.jade')
+  return gulp.src(config.jade.src)
       .pipe($.jade({
         pretty: true
       }))
-      .pipe(gulp.dest('views/html/'))
+      .pipe(gulp.dest(config.jade.dest))
+});
+
+///////////////////////
+//    HTML5 Linting  //
+///////////////////////
+gulp.task('dev:html', ()=>{
+    return gulp.src(config.html.scrDir)
+        .pipe($.html5Lint());
 });
 
 //////////////////////////////////////////////////////
@@ -155,21 +174,13 @@ gulp.task('jade', ()=>{
 const browserSync = require('browser-sync').create(),
       reload      = browserSync.reload;
 
-gulp.task('serve', ()=>{
+gulp.task('dev:serve', ()=>{
 
     browserSync.init({
       server: {
-        baseDir: "views/html/"
+        baseDir: config.html.dest
       }
     });
 
-    gulp.watch("views/html/*.html").on("change", reload);
-});
-
-///////////////////////
-//    HTML5 Linting  //
-///////////////////////
-gulp.task('html', ()=>{
-    return gulp.src('views/html/*.html')
-        .pipe($.html5Lint());
+    gulp.watch(config.html.srcDir).on("change", reload);
 });

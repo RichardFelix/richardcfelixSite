@@ -11,7 +11,7 @@ $(document).ready(function() {
         navigationPosition: 'right',
         navigationTooltips: ['home', 'aboutMe', 'projects', 'contact'],
         showActiveTooltip: false,
-        slidesNavigation: true,
+        slidesNavigation: false,
         slidesNavPosition: 'bottom',
 
         //Scrolling
@@ -38,7 +38,7 @@ $(document).ready(function() {
         recordHistory: true,
 
         //Design
-        controlArrows: true,
+        controlArrows: false,
         verticalCentered: true,
         resize : false,
         sectionsColor : ['#ccc', '#ecf0f1', '#d0d931', '#5d2d2d'],
@@ -46,7 +46,7 @@ $(document).ready(function() {
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
         responsiveWidth: 0,
-        responsiveHeight: 0,
+        responsiveHeight: 400,
 
         //Custom selectors
         sectionSelector: '.section',

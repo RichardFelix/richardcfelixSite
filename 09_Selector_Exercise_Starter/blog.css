@@ -1,0 +1,40 @@
+body{
+    border: grey 15px solid;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.post{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1{
+    font-family: sans-serif;
+}
+
+p{
+    margin-bottom: 10px;
+    font-family: fantasy;
+}
+
+.bottom{
+    border-bottom: #f1f1f1 1px solid;
+    padding-bottom: 2%;
+}
+
+.date{
+    color: #0dd0d0;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+.firstp{
+    border-left: grey 6px solid;
+    padding-left: 10px;
+}
