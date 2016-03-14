@@ -14,14 +14,23 @@
 //   width: 100%;
 // }
 
-@media only screen and (max-width: 1900px) {
+/*  large screens */
+@media only screen and (min-width: 1025px) {
+  .footerLinks{
+    padding-top: 5%;
+  }
   .footerText{
     font-size: 2.0em;
     padding-top: 6%;
   }
   .pic{
     max-height: 450px;
-    //max-width: 500px;
+  }
+  .contact{
+    padding-left: 10%;
+  }
+  .social{
+    padding-left: 10%;
   }
 }
 
