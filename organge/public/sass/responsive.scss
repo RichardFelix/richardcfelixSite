@@ -33,6 +33,13 @@
   }
  }
 
+/*        Iphone 6s Landscape  & Portriat        */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px){
+  .footerText{
+    font-size: 1.2em;
+  }
+ }
+
 @media only screen and (max-width: 480px) {
   .footerText{
     font-size: 135%;
