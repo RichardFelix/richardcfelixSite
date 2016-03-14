@@ -1,0 +1,30 @@
+//***********************
+//       variables
+//************************/
+// $mainColor: #f39c12;
+$fontFamily: Raleway;
+$fontSize: 14;
+///************************
+//        mixins
+//************************/
+// @import './widthMixin.scss';
+// @import './positionMixin.scss';
+
+/************************
+        Fonts
+************************/
+@import url(https://www.google.com/fonts#UsePlace:use/Collection:Raleway:700,500);
+
+//************************
+//        imports
+//************************/
+@import './generalScope';
+@import './hero';
+@import './projects';
+@import './footer';
+// @import './links';
+@import './responsive';
+// @import './position';
+// @import './animations';
+// @import './form';
+// @import './nav';
