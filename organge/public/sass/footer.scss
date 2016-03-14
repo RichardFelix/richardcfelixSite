@@ -1,5 +1,5 @@
 /************************
-      Responsive
+      Footer
 ************************/
 .footer{
   background-color: #f5f4f4;
@@ -7,7 +7,7 @@
 
   .footerText{
     float: right;
-    font-size: 2.0em;
+    //font-size: 2.0em;
      padding-left: 2%;
      padding-top: 2%;
      padding-right: 2%;
@@ -19,7 +19,30 @@
 
 .footerLinks{
   background-color: #444242;
-  color: white;
-  padding: 2%;
-  clear: left;
+  text-align: left;
+  height: 300px;
+  color: #f5f4f4;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 8%;
+  font-size: 1.2em;
+
+  .contact{background-color: #444242;
+    float: left;
+    line-height: 25px;
+  }
+  .social{background-color: #444242;
+    float: right;
+    line-height: 25px;
+  }
+
+  h1{
+    padding-bottom: 30px;
+  }
+}
+
+.copy{
+  background-color: #444242;
+  text-align: center;
+  color: #f5f4f4;
 }

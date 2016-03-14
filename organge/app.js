@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.get('/me', (req, res) =>{
+  res.render('me');
+});
+
 app.get('*', (req, res) =>{
   res.render('index');
 });
