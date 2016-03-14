@@ -26,6 +26,13 @@
   }
  }
 
+/*        Iphone 5s Landscape          */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape){
+  .footerText{
+    font-size: 1.2em;
+  }
+ }
+
 @media only screen and (max-width: 480px) {
   .footerText{
     font-size: 135%;
