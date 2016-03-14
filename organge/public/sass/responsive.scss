@@ -17,6 +17,11 @@
 @media only screen and (max-width: 1900px) {
   .footerText{
     font-size: 2.0em;
+    padding-top: 6%;
+  }
+  .pic{
+    max-height: 450px;
+    //max-width: 500px;
   }
 }
 
@@ -26,19 +31,21 @@
   }
  }
 
-/*        Iphone 5s Landscape          */
-@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape){
-  .footerText{
-    font-size: 1.2em;
-  }
- }
-
 /*        Iphone 6s Landscape  & Portriat        */
 @media only screen and (min-device-width : 414px) and (max-device-width : 736px){
   .footerText{
     font-size: 1.2em;
+    padding-top: 2%;
   }
  }
+
+ /*        Iphone 5s Landscape          */
+ @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape){
+   .footerText{
+     font-size: 1.2em;
+     padding-top: 2%;
+   }
+  }
 
 @media only screen and (max-width: 480px) {
   .footerText{
@@ -74,6 +81,7 @@
   }
 }
 
+/*        iPad in portrait & landscape       */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
   .footerText{
     font-size: 1.5em;
