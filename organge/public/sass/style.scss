@@ -1,14 +1,17 @@
 //***********************
 //       variables
 //************************/
-// $mainColor: #f39c12;
+$footerBGColor: #444242;
+$projectsTxtColor: #6d6b6b;
+$footerTxtColor: #f5f4f4;
+$aboutTxtColor: #5d5959;
+$mainColor: #f94133;
 $fontFamily: Raleway;
 $fontSize: 14;
 ///************************
 //        mixins
 //************************/
-// @import './widthMixin.scss';
-// @import './positionMixin.scss';
+
 
 /************************
         Fonts
@@ -23,9 +26,5 @@ $fontSize: 14;
 @import './projects';
 @import './footer';
 @import './me';
-// @import './links';
+@import './about';
 @import './responsive';
-// @import './position';
-// @import './animations';
-// @import './form';
-// @import './nav';

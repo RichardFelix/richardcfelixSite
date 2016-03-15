@@ -1,22 +1,26 @@
 /************************
       Footer
 ************************/
-.about{
+.footerLinks{
   overflow: hidden;
-  background: #f5f4f4;
+  background: $footerBGColor;
   width: 100%;
-  color: #5d5959;
+  color: $footerTxtColor;
   max-height: 690px;
 }
-.left{
-  float: left;
+.copy{
+  padding-top: 90px;
+  padding-bottom: 20px;
+  text-align: center;
+  overflow: hidden;
+  background: $footerBGColor;
+  width: 100%;
+  color: $footerTxtColor;
+  max-height: 200px;
 }
-.right{
-  float: right;
-}
-/************************
-      Footer
-************************/
+// /************************
+//       Footer
+// ************************/
 // .footer{
 //   background-color: #f5f4f4;
 //   color: #6d6b6b;

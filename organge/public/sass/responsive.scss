@@ -51,11 +51,23 @@
 // @media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
 // @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
 
+
 /************************
       Responsive
 ************************/
-/* hi-res laptops and desktops */
-@media (min-width:1281px) {
+.col-3{
+  width: 33%;
+}
+.col-5{
+  width: 50%;
+}
+.col-6{
+  width: 67%;
+}
+/*------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------DeskTops-----------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------*/
+@media (min-width:1020px) {
   .about h1{
    padding: 60px 20px 0px;
    font-size: 4em;
@@ -68,7 +80,65 @@
     width: 60%;
     padding-right: 7%;
   }
+  .footerLinks{
+    padding-top: 5%;
+  }
+  .contact{
+    padding-left: 10%;
+  }
+  .social{
+    padding-left: 10%;
+  }
+  .footer{
+    h1{
+      font-size: 2.5em;
+    }
+    p, a{
+      font-size: 1.2em;
+    }
+  }
 }
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------General------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+  .blurb{
+    font-size: 135%;
+    float: none !important;
+  }
+  .footer{
+    text-align: center;
+  }
+  .pic{
+    float: none !important;
+  }
+  .col-3{
+    width: 100%;
+  }
+  .col-6{
+    width: 100%;
+  }
+  .col-5{
+    width: 100%;
+  }
+  .contact{
+    float: none !important;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .social{
+    float: none !important;
+    text-align: center;
+  }
+  .copy{
+    padding-top: 100px;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------Portrait-----------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------*/
 
 /* Iphone 5 to 6s Portrait */
 @media only screen and (max-width: 480px) {
@@ -101,6 +171,38 @@
   }
 }
 
+/* iphone 6 to 6s Portrait */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait){
+  .footer{
+    text-align: center;
+  }
+  .about{
+    text-align: center;
+
+    h1{
+     padding: 10px 20px 0px;
+     font-size: 2em;
+    }
+    p{
+      padding: 0px 20px 30px;
+      font-size: 1.5em;
+    }
+  }
+  .copy{
+    text-align: center;
+  }
+  .col-3{
+    width: 100%;
+  }
+  .col-6{
+    width: 100%;
+  }
+  .col-5{
+    width: 100%;
+  }
+}
+
+
 /* ipad / ipad mini Portrait */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
   .about{
@@ -114,6 +216,10 @@
     }
   }
 }
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------Landscape----------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------*/
 
 /* ipad / ipad mini Landscape */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape){
@@ -141,10 +247,15 @@
       font-size: 1.2em;
     }
   }
+  .footer{
+    .social, .contact{
+      text-align: center;
+    }
+  }
 }
 
 /* Iphone 6 Landscape */
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape){
   .about{
     h1{
      padding: 10px 20px 0px;
@@ -153,6 +264,11 @@
     p{
       padding: 0px 20px 30px;
       font-size: 1em;
+    }
+  }
+  .footer{
+    .social, .contact{
+      text-align: center;
     }
   }
 }
@@ -171,15 +287,6 @@
   }
 }
 
-.col-3{
-  width: 33%;
-}
-.col-5{
-  width: 50%;
-}
-.col-6{
-  width: 67%;
-}
 // .col-12{
 //   width: 100%;
 // }
@@ -204,6 +311,7 @@
 //   }
 // }
 //
+// /* Iphone 6 Landscape */
 // @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
 //   .footerText{
 //     font-size: 1.2em;

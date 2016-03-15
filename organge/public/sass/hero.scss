@@ -15,10 +15,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation-duration: 2s;
+    animation-delay: .3s;
 
     .slogan{
       font-size: .3em;
       color: black;
+      animation-duration: 2s;
+      animation-delay: 1.5s;
     }
   }
 }
