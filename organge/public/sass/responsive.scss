@@ -41,17 +41,21 @@
 //   }
 // }
 
-@media (min-width:320px) {
-  /* smartphones, iPhone, portrait 480x320 phones */
-}
-@media (max-width:481px){
-   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-}
-@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
-@media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+// @media (min-width:320px) {
+//   /* smartphones, iPhone, portrait 480x320 phones */
+// }
+// @media (max-width:481px){
+//    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+// }
+// @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+// @media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+// @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+
+/************************
+      Responsive
+************************/
+/* hi-res laptops and desktops */
 @media (min-width:1281px) {
-  /* hi-res laptops and desktops */
   .about h1{
    padding: 60px 20px 0px;
    font-size: 4em;
@@ -64,19 +68,6 @@
     width: 60%;
     padding-right: 7%;
   }
-}
-
-/************************
-      Responsive
-************************/
-.col-3{
-  width: 33%;
-}
-.col-5{
-  width: 50%;
-}
-.col-6{
-  width: 67%;
 }
 
 /* Iphone 5 to 6s Portrait */
@@ -125,10 +116,7 @@
 }
 
 /* ipad / ipad mini Landscape */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape){
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape){
   .about{
     h1{
      padding: 10px 20px 0px;
@@ -181,6 +169,16 @@ and (orientation : landscape){
       font-size: 1em;
     }
   }
+}
+
+.col-3{
+  width: 33%;
+}
+.col-5{
+  width: 50%;
+}
+.col-6{
+  width: 67%;
 }
 // .col-12{
 //   width: 100%;
