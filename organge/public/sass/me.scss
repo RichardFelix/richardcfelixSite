@@ -1,9 +1,16 @@
 /************************
           Me
 ************************/
+@keyframes animatedBackground{
+	to{
+    background-position: 100% 0;
+  }
+}
+
 .me{
-  height: 100vh;
-  background-color: #6d6b6b;
-  background: url(../img/meBG.png) no-repeat center center fixed ;
-  background-size: cover;
+	height: 100vh;
+	background-image: url(../img/meBG.png);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation: animatedBackground 5s linear infinite alternate;
 }
