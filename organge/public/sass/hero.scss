@@ -4,7 +4,7 @@
 .hero{
   height: 100vh;
   // background: url(../img/hero.jpg) no-repeat center center fixed;
-  background: linear-gradient(rgba(0,0,0, 0.3), rgba(0,0,0, 0.7)), url(../img/hero.jpg) no-repeat  fixed;
+  background: linear-gradient(rgba(0,0,0, 0.3), rgba(0,0,0, 0.7)), url(../img/hero.jpg);
   background-size: cover;
 
   .heroTitle{
