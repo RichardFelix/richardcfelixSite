@@ -3,7 +3,8 @@
 ************************/
 .hero{
   height: 100vh;
-  background: url(../img/hero.jpg) no-repeat center center fixed;
+  // background: url(../img/hero.jpg) no-repeat center center fixed;
+  background-image: linear-gradient(rgba(0,0,0, 0.3), rgba(0,0,0, 0.7)), url(../img/hero.jpg);
   background-size: cover;
 
   .heroTitle{
@@ -17,10 +18,11 @@
     transform: translate(-50%, -50%);
     animation-duration: 2s;
     animation-delay: .3s;
+    text-shadow: 2px 2px #000;
 
     .slogan{
       font-size: .3em;
-      color: black;
+      color: white;
       animation-duration: 2s;
       animation-delay: 1.5s;
     }
