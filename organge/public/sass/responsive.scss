@@ -2,28 +2,60 @@
       Responsive
 ************************/
 .col-3{
-  width: 33%;
+  width: 31%;
 }
 .col-5{
   width: 50%;
 }
 .col-6{
-  width: 67%;
+  width: 69%;
 }
+.textLeft{text-align: left}
 /*------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------DeskTops-----------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------*/
-@media (min-width:1020px) {
-  .about h1{
-   padding: 60px 20px 0px;
-   font-size: 4em;
+// @media (min-width:1050px) {
+//   .about h1{
+//    padding: 60px 20px 0px;
+//    font-size: 4em;
+//   }
+//   .about p{
+//    padding: 0px 20px 30px;
+//    font-size: 2em;
+//   }
+//   .col-6.right{
+//     padding-right: 7%;
+//   }
+//   .footerLinks{
+//     padding-top: 5%;
+//   }
+//   .contact{
+//     padding-left: 10%;
+//   }
+//   .social{
+//     padding-left: 10%;
+//   }
+//   .footer{
+//     h1{
+//       font-size: 2.5em;
+//     }
+//     p, a{
+//       font-size: 1.2em;
+//     }
+//   }
+// }
+
+@media (max-width:1020px) {
+  .about h1 {
+    padding: 30px 20px 0px;
+    font-size: 2.4em;
+    margin: 0.5em 0;
   }
   .about p{
    padding: 0px 20px 30px;
    font-size: 2em;
   }
   .col-6.right{
-    width: 60%;
     padding-right: 7%;
   }
   .footerLinks{

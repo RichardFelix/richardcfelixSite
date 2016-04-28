@@ -115,7 +115,7 @@ gulp.task('prod:jsMini', ()=>{
 gulp.task('prod:img', ()=>{
   return gulp.src(config.img.srcDir)
     .pipe($.imagemin({
-      optimizationLevel: 5
+      optimizationLevel: 7       //  0 thru 7 being the most abusive 3 is default
     }))
     .pipe(gulp.dest(config.img.dest));
 });
