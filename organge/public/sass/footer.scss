@@ -1,20 +1,12 @@
 /************************
       Footer
 ************************/
-.footerLinks{
-  overflow: hidden;
+.footer{
+  font-size: 1.3em;
   background: $footerBGColor;
-  width: 100%;
   color: $footerTxtColor;
-  max-height: 690px;
-}
-.copy{
-  padding-top: 90px;
-  padding-bottom: 20px;
-  text-align: center;
-  overflow: hidden;
-  background: $footerBGColor;
-  width: 100%;
-  color: $footerTxtColor;
-  max-height: 200px;
+
+  .copyTxt{
+    font-size: .7em;
+  }
 }

@@ -4,7 +4,19 @@
 .about{
   overflow: hidden;
   background: $footerTxtColor;
-  width: 100%;
   color: $aboutTxtColor;
-  max-height: 690px;
+  font-size: 2em;
+
+  .paddingTop{
+    padding: 3%;
+  }
+
+  .box{
+    padding: 0 !important;
+  }
+
+  img{
+    width: 100%;
+  }
+
 }

@@ -1,38 +1,38 @@
 - var animationDuration = '3s';
 
-section.projects
-  div.row
-    h1.proTitle Work.Fun.Projects
-    
-  div.row
-    div.polaroid.col-3.left.wow.fadeIn( data-wow-duration=animationDuration)
-      a(href='https://www.primexprime.com' target='_blank' alt='PrimeX')
-        img(src='img/primex.png')
-        div.desc
-          p PrimeX
-    div.polaroid.col-3.left.left.wow.fadeIn( data-wow-duration=animationDuration)
-      a(href='https://www.topgearny.com' target='_blank' alt='TOPGEARNY')  
-        img(src='img/topgearny.png')
-        div.desc
-          p TOPGEARNY
-    div.polaroid.col-3.left.left.wow.fadeIn( data-wow-duration=animationDuration)
-      a(href='/me' target='_blank' alt='Art')
-        img(src='img/me.png')
-        div.desc
-          p Glimpse of Me 
-  div.row
-    div.polaroid.col-3.left.left.wow.fadeIn( data-wow-duration=animationDuration)
-      a(href='http://lostman10002.deviantart.com/art/primexCard-592569692' target='_blank' alt='Business Cards')
-        img(src='img/cards.png')
-        div.desc
-          p Business Card
-    div.polaroid.col-3.left.left.wow.fadeIn( data-wow-duration=animationDuration)
-      a(href='https://bitbucket.org/RichardFelix/richardcfelix_dev/' target='_blank' alt='Version1')  
-        img(src='img/old.png')
-        div.desc
-          p Version 1
-    div.polaroid.col-3.left.left.wow.fadeIn( data-wow-duration=animationDuration)
-      a(href='https://github.com/RichardFelix/richardcfelixSite' target='_blank' alt='My Site')
-        img(src='img/site.png')
-        div.desc
-          p My Site 
+section.projects.container-fliud   
+
+    div.row
+      h1.proTitle Work.Fun.Projects
+  
+    div.row
+      div.col-md-4.wow.fadeIn.marginTop( data-wow-duration=animationDuration)
+        a(href='https://www.primexprime.com' target='_blank' alt='PrimeX')
+          img.img-responsive.cardsBtn(src='img/primex.png' alt='PrimeX')
+      div.col-md-4.wow.fadeIn.marginTop( data-wow-duration=animationDuration)
+        a(href='https://www.topgearny.com' target='_blank' alt='TOPGEARNY')  
+          img.img-responsive.cardsBtn(src='img/topgearny.png' alt='TOPGEARNY')
+      div.col-md-4.wow.fadeIn.marginTop( data-wow-duration=animationDuration)
+        input(type='image' class='img-responsive cardsBtn' src='img/myCard.png' alt='Business Cards' data-toggle='modal' data-target='#myModal')
+          
+    div.row
+      div.col-md-4.wow.fadeIn.marginTop( data-wow-duration=animationDuration)
+        a(href='http://richardfelix.github.io/froggerGameClone/' target='_blank' alt='Frogger Clone Game')  
+          img.img-responsive.cardsBtn(src='img/frogger.png' alt='Frogger Clone Game')
+      div.col-md-4.wow.fadeIn.marginTop( data-wow-duration=animationDuration)
+        a(href='https://github.com/RichardFelix/richardcfelixSite' target='_blank' alt='My Site')
+          img.img-responsive.cardsBtn(src='img/site.png' alt='My Site')
+      div.col-md-4.wow.fadeIn.marginTop( data-wow-duration=animationDuration)
+        a(href='/me' target='_blank' alt='Art')
+          img.img-responsive.cardsBtn(src='img/me.png' alt='Art')
+          
+    #myModal.modal.fade(role='dialog')
+      .modal-dialog.modal-md
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal') &times;           
+            h4.modal-title My Business Cards
+          .modal-body
+            img.img-responsive(src='img/card.png' alt='Business Cards')       
+          .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Close
