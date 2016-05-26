@@ -1,0 +1,7 @@
+{
+    "camelcase": true,
+    "maxlen": 120,
+    "quotmark": true,
+    "maxdepth": 5,
+    "browserify": true
+}
