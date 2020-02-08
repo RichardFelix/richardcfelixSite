@@ -1,0 +1,12 @@
+/************************
+      Footer
+************************/
+.footer{
+  font-size: 1.3em;
+  background: $footerBGColor;
+  color: $footerTxtColor;
+
+  .copyTxt{
+    font-size: .7em;
+  }
+}

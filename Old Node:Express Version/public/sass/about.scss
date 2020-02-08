@@ -1,0 +1,22 @@
+/************************
+          About
+************************/
+.about{
+  overflow: hidden;
+  background: $footerTxtColor;
+  color: $aboutTxtColor;
+  font-size: 2em;
+
+  .paddingTop{
+    padding: 3%;
+  }
+
+  .box{
+    padding: 0 !important;
+  }
+
+  img{
+    width: 100%;
+  }
+
+}

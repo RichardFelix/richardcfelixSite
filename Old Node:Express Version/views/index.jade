@@ -1,0 +1,12 @@
+extends base
+
+block body
+  include ./partials/hero.jade
+  include ./partials/projects.jade
+  include ./partials/about.jade
+  include ./partials/footer.jade  
+    
+  include ./script.jade
+  script.
+      new WOW().init();
+  

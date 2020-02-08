@@ -1,0 +1,29 @@
+//***********************
+//       variables
+//************************/
+$footerBGColor: #444242;
+$projectsTxtColor: #6d6b6b;
+$footerTxtColor: #f5f4f4;
+$aboutTxtColor: #5d5959;
+$mainColor: #f94133;
+$fontFamily: Raleway;
+$fontSize: 14;
+///************************
+//        mixins
+//************************/
+
+/************************
+        Fonts
+************************/
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,700);
+
+//************************
+//        imports
+//************************/
+@import './generalScope';
+@import './hero';
+@import './projects';
+@import './footer';
+@import './me';
+@import './about';
+@import './responsive';

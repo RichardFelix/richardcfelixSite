@@ -1,0 +1,42 @@
+/************************
+        Fonts
+************************/
+@import url(./roboto.css);
+
+/************************
+      General Scope
+************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body{
+  background-color: #2d2d2d;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name{
+    font-size: 3em;
+    font-family: Raleway;
+    margin: 0 0 5px 0;
+}
+
+.twitter{
+  font-size: 3em;
+  height: 40px;
+  width: 40px;
+  color: whitesmoke;
+}
+
+.twitter path{
+  fill: currentColor;
+}

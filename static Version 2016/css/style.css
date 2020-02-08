@@ -1,0 +1,143 @@
+/************************
+        Fonts
+************************/
+@import url(./roboto.css);
+/************************
+      General Scope
+************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  font-size: 14;
+  font-family: Raleway;
+  font-weight: 500; }
+
+.row {
+  max-width: 100%;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none;
+  color: #f94133;
+  cursor: pointer; }
+
+.clearfix {
+  overflow: auto; }
+
+/************************
+          Hero
+************************/
+.hero .heroTitle {
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  font-size: 3.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  text-shadow: 2px 2px #000; }
+  .hero .heroTitle .slogan {
+    font-size: .3em;
+    color: white;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s; }
+
+.hero img {
+  height: 100vh;
+  width: 100vw; }
+
+/************************
+        Projects
+************************/
+.projects {
+  background-color: white;
+  padding-bottom: 100px; }
+  .projects .proTitle {
+    color: #6d6b6b;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 2em; }
+  .projects .marginTop {
+    margin-top: 6%; }
+  .projects .cardsBtn {
+    width: 100%;
+    transition: 1s all ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .projects .cardsBtn:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+
+/************************
+      Footer
+************************/
+.footer {
+  font-size: 1.3em;
+  background: #444242;
+  color: #f5f4f4; }
+  .footer .copyTxt {
+    font-size: .7em; }
+
+/************************
+          Me
+************************/
+@-webkit-keyframes animatedBackground {
+  to {
+    background-position: 100% 0; } }
+@keyframes animatedBackground {
+  to {
+    background-position: 100% 0; } }
+
+.me {
+  height: 100vh;
+  background-image: url(../img/meBG.png);
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  -webkit-animation: animatedBackground 5s linear infinite alternate;
+          animation: animatedBackground 5s linear infinite alternate; }
+
+/************************
+          About
+************************/
+.about {
+  overflow: hidden;
+  background: #f5f4f4;
+  color: #5d5959;
+  font-size: 2em; }
+  .about .paddingTop {
+    padding: 3%; }
+  .about .box {
+    padding: 0 !important; }
+  .about img {
+    width: 100%; }
+
+/************************
+      Responsive
+************************/
+/*------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------DeskTops-----------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 796px) {
+  .about {
+    font-size: 2.5em; } }
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------General Phones-----------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+  .about {
+    font-size: 1.5em; } }
