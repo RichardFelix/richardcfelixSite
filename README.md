@@ -6,11 +6,5 @@ This is my repository for my responsive website.
 
 # Tools and Technology used #
 
-*     JavaScript
-*     Node.js
-*     Express
-*     Bootstrap
-*     Sass
-*     Jade
 *     HTML
 *     CSS
